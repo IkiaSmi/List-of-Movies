@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Table(name = "users")
-public class userEntity {
+public class UserEntity {
     @Id
     @GeneratedValue
     public Long id;

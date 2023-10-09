@@ -1,6 +1,6 @@
 package org.example.Dto;
 
-public record fullUserDto(
+public record FullUserDto(
         Long id,
         String name
 ) {

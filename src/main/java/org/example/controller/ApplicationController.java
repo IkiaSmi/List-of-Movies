@@ -1,13 +1,11 @@
 package org.example.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/application")
 public class ApplicationController {
 
-    @PostMapping("{id}")
-    static void createUser(Long id){}
+    @GetMapping("")
+    static void createUser(@RequestParam String name){}
 }

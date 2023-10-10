@@ -15,7 +15,7 @@ public class ApplicationController {
     private static AuthorizationUserService service;
 
     @GetMapping("")
-    static UserEntity createUser(@RequestParam String name){
-        return service.createdUser(new UserCreateUpdateDto(name));
+    static void createUser(@RequestParam("name") String name){
+        service.createdUser(name);
     }
 }

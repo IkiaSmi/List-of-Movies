@@ -1,0 +1,5 @@
+org/example/entity/userEntity.class
+org/example/repository/userRepository.class
+org/example/ListOfMoviesApplication.class
+org/example/controller/ApplicationController.class
+org/example/servise/authorizationUserService.class

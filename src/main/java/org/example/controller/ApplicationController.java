@@ -18,17 +18,17 @@ public class ApplicationController {
         return service.createdUser(new BodyDto(name, password));
     }
 
-//    @GetMapping("/check")
+    @GetMapping("/check")
     boolean checkUser(@RequestParam("id") Long id){
         return service.checkedUserById(new IdDto(id));
     }
 
-//    @RequestMapping("")
+    @RequestMapping("")
     Long getId(@RequestParam("name") String name, @RequestParam("password") String password){
         return service.getUserId(new BodyDto(name, password));
     }
 
-//    @PostMapping("")
+    @PostMapping("")
     UserEntity updateUser(@RequestParam("id") Long id, @RequestParam("name") String name, @RequestParam("password") String password){
         return service.updatedUser(new FullUserDto(id, name, password));
     }

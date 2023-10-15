@@ -1,7 +1,7 @@
 package org.example.controller;
 
 import jakarta.annotation.Resource;
-import org.example.Dto.UserCreateUpdateDto;
+import org.example.Dto.BodyDto;
 import org.example.entity.UserEntity;
 import org.example.servise.AuthorizationUserService;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +15,6 @@ public class ApplicationController {
 
     @GetMapping("")
     UserEntity createUser(@RequestParam("name") String name, @RequestParam("password") String password){
-        return service.createdUser(new UserCreateUpdateDto(name, password));
+        return service.createdUser(new BodyDto(name, password));
     }
 }

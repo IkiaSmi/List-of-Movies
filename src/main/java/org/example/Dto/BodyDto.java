@@ -1,6 +1,6 @@
 package org.example.Dto;
 
-public record UserCreateUpdateDto(
+public record BodyDto(
         String name,
         String password
 ) {

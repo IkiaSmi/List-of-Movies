@@ -13,7 +13,7 @@ public class ApplicationController {
     @Resource
     private AuthorizationUserService service;
 
-    @GetMapping("")
+    @GetMapping("create")
     UserEntity createUser(@RequestParam("name") String name, @RequestParam("password") String password){
         return service.createdUser(new BodyDto(name, password));
     }
@@ -23,12 +23,12 @@ public class ApplicationController {
         return service.checkedUserById(new IdDto(id));
     }
 
-    @RequestMapping("")
+    @GetMapping("getId")
     Long getId(@RequestParam("name") String name, @RequestParam("password") String password){
         return service.getUserId(new BodyDto(name, password));
     }
 
-    @PostMapping("")
+    @PostMapping("update")
     UserEntity updateUser(@RequestParam("id") Long id, @RequestParam("name") String name, @RequestParam("password") String password){
         return service.updatedUser(new FullUserDto(id, name, password));
     }

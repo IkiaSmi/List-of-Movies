@@ -11,10 +11,11 @@ import lombok.Setter;
 public class UserEntity {
     @Id
     @GeneratedValue
+    @Column(name = "id", nullable = false)
     public Long id;
+
     @Column
     public String name;
     @Column
     public String password;
-
 }

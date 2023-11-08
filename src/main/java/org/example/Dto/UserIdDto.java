@@ -1,6 +1,6 @@
 package org.example.Dto;
 
-public record IdDto(
+public record UserIdDto(
         Long id
 ) {
 }

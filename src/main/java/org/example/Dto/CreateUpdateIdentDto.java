@@ -1,7 +1,6 @@
 package org.example.Dto;
 
-public record FullUserDto(
-        Long id,
+public record CreateUpdateIdentDto(
         String name,
         String password
 ) {

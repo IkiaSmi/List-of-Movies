@@ -1,0 +1,31 @@
+package org.example.controller;
+
+import jakarta.annotation.Resource;
+import org.example.Dto.Column.Id_NameDto;
+import org.example.Dto.Column.NameDto;
+import org.example.Dto.Instance.*;
+import org.example.servise.MovieService;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+@RequestMapping("/movie")
+public class MovieController {
+
+    @Resource
+    public MovieService movie_service;
+
+    @GetMapping("addMovie")
+    public MovieInstanceDto MovieCreate(@RequestParam("name") String name){
+        return movie_service.createdMovies(new NameDto(name));
+    }
+
+    @PostMapping("createMovieEntry")
+    public Id_NameDto Movie_Entry_cr(@RequestParam("UserId") Long UserId, @RequestParam("MovieName") String MovieName){
+        return movie_service.Movie_Entry(new Id_NameDto(UserId, MovieName));
+    }
+
+}

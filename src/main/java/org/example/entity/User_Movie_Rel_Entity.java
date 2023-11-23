@@ -15,7 +15,6 @@ import lombok.Setter;
 public class User_Movie_Rel_Entity {
     @Id
     @Column
-//    @Relational()
     public Long userid;
     @Id
     @Column

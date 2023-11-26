@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends CrudRepository<UserEntity,Long> {
+public interface UserRepository extends CrudRepository<UserEntity, Long> {
 
     @Query(value = "SELECT * from users where name = :name", nativeQuery = true)
     UserEntity findUserEntityByName(@Param("name") String name);

@@ -5,13 +5,9 @@ import org.example.Dto.Column.Id_NameDto;
 import org.example.Dto.Column.NameDto;
 import org.example.Dto.Instance.*;
 import org.example.servise.MovieService;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @RequestMapping("/movie")
 public class MovieController {
 

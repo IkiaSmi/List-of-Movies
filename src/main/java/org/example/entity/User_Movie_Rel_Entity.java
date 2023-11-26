@@ -1,10 +1,6 @@
 package org.example.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jdk.jfr.Relational;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,12 +8,12 @@ import lombok.Setter;
 @Setter
 @Table(name="user_movies_rel")
 @Entity
+@IdClass(User_Movie_RelId.class)
 public class User_Movie_Rel_Entity {
     @Id
-    @Column
     public Long userid;
+
     @Id
-    @Column
     public Long movieid;
 
 }

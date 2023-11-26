@@ -3,7 +3,6 @@ package org.example.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.validator.constraints.UniqueElements;
 
 @Getter
 @Setter
@@ -15,6 +14,5 @@ public class MovieEntity {
     @GeneratedValue
     public Long id;
     @Column
-    @UniqueElements
     public String name;
 }

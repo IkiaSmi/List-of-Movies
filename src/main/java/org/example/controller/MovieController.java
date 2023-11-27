@@ -20,8 +20,13 @@ public class MovieController {
     }
 
     @PostMapping("createMovieEntry")
-    public Id_NameDto Movie_Entry_cr(@RequestParam("UserId") Long UserId, @RequestParam("MovieName") String MovieName){
-        return movie_service.Movie_Entry(new Id_NameDto(UserId, MovieName));
+    public Id_NameDto Movie_Entry_cr(@RequestParam("UserId") Long userId, @RequestParam("movieName") String movieName){
+        return movie_service.create_Movie_Entry(new Id_NameDto(userId, movieName));
+    }
+
+    @DeleteMapping("deleteMovieEntry")
+    public Id_NameDto Movie_Entry_del(@RequestParam("userId") Long userId, @RequestParam("movieName") String movieName){
+        return movie_service.delete_Movie_Entry(new Id_NameDto(userId, movieName));
     }
 
 }
